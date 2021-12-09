@@ -21,7 +21,7 @@ public class ExceptionControllerAdvice {
     }
 
     @ExceptionHandler
-    public ResponseEntity<String> handleUserNotFound(AlreadyUsedException exception) {
+    public ResponseEntity<String> handleAlreadyUsed(AlreadyUsedException exception) {
         return ResponseEntity
                 .status(HttpStatus.CONFLICT)
                 .body(exception.getMessage());
