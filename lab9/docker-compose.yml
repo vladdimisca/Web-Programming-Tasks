@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'lab9_spring'
+      MYSQL_PASSWORD: 'random-pass'
+      MYSQL_ROOT_PASSWORD: 'random-pass'
+    ports:
+      - '3307:3306'
